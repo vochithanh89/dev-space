@@ -1,0 +1,113 @@
+@import '../../styles/mixin';
+@import '../../styles/variables';
+
+.work {
+    padding: $sectionPadding;
+    background-color: $primaryColor2;
+
+    .container {
+        @include container;
+        .titleContainer {
+            text-align: center;
+
+            .title {
+                @include title;
+            }
+        }
+
+        .workTitle {
+            margin-bottom: 2.5rem;
+            padding: 0 2rem;
+            text-align: center;
+            color: $textColor1;
+            font-size: 5rem;
+            font-weight: 700;
+
+            @include mobile {
+                font-size: 3.2rem;
+            }
+
+            span {
+                color: $primaryColor1;
+            }
+        }
+    }
+}
+
+.pricingList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -2rem;
+
+    .pricingItem {
+        width: calc(100% / 3);
+        padding: 2rem;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+}
+
+.pricingItemContainer {
+    padding: 1.6rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    background-color: $textColor1;
+
+    .pricingItemHeading {
+        margin-bottom: 1.6rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $textColor4;
+
+        .pricingItemTitle {
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+    }
+
+    .pricingItemPrice {
+        text-align: center;
+
+        .pricingItemPriceCount {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-right: 0.8rem;
+        }
+    }
+
+    .pricingItemContent {
+        padding: 0 2rem;
+
+        .pricingContentItem {
+            text-align: center;
+        }
+
+        .pricingContentItem.pricingContentItem {
+            margin-top: 0.8rem;
+        }
+    }
+
+    .pricingItemContactBtn {
+        display: inline-block;
+        min-width: 220px;
+        margin-top: 1.6rem;
+        padding: 1.2rem 2rem;
+        text-align: center;
+        color: $textColor1;
+        background-color: black;
+        font-size: 1.8rem;
+        cursor: pointer;
+        transition: $transition2;
+
+        &:hover {
+            background-color: $btnColor;
+        }
+    }
+}

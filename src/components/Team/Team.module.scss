@@ -1,0 +1,61 @@
+@import '../../styles/mixin';
+@import '../../styles/variables';
+
+.team {
+    padding: $sectionPadding;
+    background-color: $backgroundColor1;
+
+    .container {
+        @include container;
+
+        .titleContainer {
+            text-align: center;
+
+            .title {
+                @include title;
+            }
+        }
+
+        .memberList {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.memberItem {
+    padding: 0 2rem;
+    width: calc(100% / 3);
+
+    @include mobile {
+        width: 100%;
+    }
+
+    .memberItemContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .memberImg {
+            margin-bottom: 1.6rem;
+            aspect-ratio: 1/1;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .memberName {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-size: 2rem;
+            font-weight: 700;
+            color: $btnColor;
+        }
+
+        .memberPosition {
+            color: $textColor3;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@import '../../styles/mixin';
+@import '../../styles/variables';
+
+.openSource {
+    padding: $sectionPadding;
+
+    .container {
+        text-align: center;
+        @include container;
+
+        .titleContainer {
+            text-align: center;
+
+            .title {
+                @include title;
+            }
+        }
+
+        .openSourceImg {
+            max-height: 102px;
+        }
+
+        .openSourceTitle {
+            margin-bottom: 3.6rem;
+            font-size: 7rem;
+            font-weight: 700;
+
+            @include mobile {
+                font-size: 4.6rem;
+            }
+        }
+
+        .followBtn {
+            display: inline-block;
+            padding: 1.6rem 3.6rem;
+            border: 1px solid $textColor3;
+            font-size: 1.8rem;
+            color: black;
+        }
+    }
+}

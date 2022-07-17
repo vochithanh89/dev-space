@@ -1,0 +1,43 @@
+@import './variables';
+
+@mixin mobile {
+    @media (max-width: #{$mobile-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin container {
+    padding: 0 2rem;
+    max-width: $maxWidthM;
+    margin: auto;
+    @include tablet {
+        max-width: $maxWidthS;
+    }
+
+    @include mobile {
+        max-width: $maxWidthXS;
+    }
+}
+
+@mixin title {
+    display: inline-block;
+    margin-bottom: 4rem;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    color: $textColor3;
+    border-bottom: 1px solid $textColor3;
+}

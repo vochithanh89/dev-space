@@ -1,0 +1,42 @@
+@import '../../styles/mixin';
+@import '../../styles/variables';
+
+.footer {
+    padding: $sectionPadding;
+    background-color: $primaryColor2;
+
+    .container {
+        @include container;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.footerList {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 0 2rem;
+
+    @include mobile {
+        width: 50%;
+        padding: 2rem;
+    }
+
+    .footerItem {
+        a {
+            color: $textColor3;
+            font-weight: 300;
+        }
+    }
+
+    .footerItem ~ .footerItem {
+        margin-top: 1rem;
+    }
+
+    .footerItem.footerItemTitle {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        color: white;
+    }
+}

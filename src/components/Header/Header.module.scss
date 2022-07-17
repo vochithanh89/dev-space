@@ -1,0 +1,57 @@
+@import '../../styles/mixin';
+@import '../../styles/variables';
+
+.header {
+    padding: $sectionPadding;
+    background-image: $backgroundColorRadient;
+
+    .container {
+        @include container;
+    }
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -3rem;
+    @include tablet {
+        flex-direction: column;
+    }
+
+    .logo {
+        display: flex;
+        align-items: flex-start;
+
+        .logoText {
+            color: $textColor1;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logoImg {
+            width: 34px;
+            padding-right: 1rem;
+        }
+    }
+
+    .navList {
+        display: flex;
+        @include mobile {
+            display: none;
+        }
+
+        .navItem {
+            padding: 0.5rem 2.4rem;
+            a {
+                color: $textColor1;
+            }
+        }
+
+        .navItem.navItemBtn {
+            padding: 0.5rem 2rem;
+            border-radius: 5rem;
+            background-color: $primaryColor1;
+        }
+    }
+}

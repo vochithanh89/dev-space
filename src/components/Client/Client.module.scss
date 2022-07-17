@@ -1,0 +1,37 @@
+@import '../../styles/mixin';
+@import '../../styles/variables';
+
+.client {
+    background-color: $backgroundColor1;
+    padding: $sectionPadding;
+
+    .container {
+        @include container;
+
+        .titleContainer {
+            text-align: center;
+            .title {
+                @include title;
+            }
+        }
+    }
+}
+
+.clientList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .clientItem {
+        .clientItemImg {
+            height: 34px;
+            @include mobile {
+                height: 30px;
+            }
+        }
+
+        .clientItemImg.clientItemImg {
+            margin: 0 3rem;
+        }
+    }
+}
